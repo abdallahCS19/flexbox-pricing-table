@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+    padding: 0;
+        font-family: "Sono", sans-serif;
+        
+      }
+      .pricing-container{
+        display: flex;
+        justify-content: center;
+         align-items: center;
+        height: 100vh;
+        gap: 2rem;
+        background-color: #F4F4F4;
+       
+      }
+      .pricing-plan {
+        flex: 1;
+        background-color:white ;
+        text-align: center;
+        max-width: 400px;
+         padding: 20px;
+         border-radius: 40px;
+      }
+      .plan-title{
+         font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      }
+      .plan-price{
+        font-size: 48px;
+        font-weight: bold;
+         margin-bottom: 10px;
+      }
+      .plan-button{ 
+       padding: 10px;
+      background-color: black;
+      color: #F4F4F4;
+        font: bold;
+        border-radius: 10px;
+        border: none;
+      }
+      .plan-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-weight: bold;
+    }
+    .plan-features li {
+      margin-bottom: 20px;
+    }
+   .plan-features li.disabled {
+    color: gray;
+}
+.basic-plan {
+    background-color: #FFFFFF;
+}
+.basic-plan .plan-button {
+    background-color: #333333;
+}
+
+.standard-plan {
+   
+    background: linear-gradient(135deg, #e6e6e6 0%, #ffffff 25%, #cccccc 50%, #f2f2f2 75%, #bfbfbf 100%);
+    
+    /* Optional: A subtle inner shadow makes the card look like a solid piece of metal */
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.8), 0 4px 10px rgba(0, 0, 0, 0.1);
+    
+    color: #1a1a1a; 
+}
+
+
+.standard-plan .plan-button {
+    background-color: #1a1a1a; 
+    color: #ffffff;
+}
+
+.premium-plan {
+    
+    background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+    
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.6), 0 6px 15px rgba(0, 0, 0, 0.2);
+    
+    color: #1a1a1a; 
+}
+
+
+.premium-plan .plan-button {
+    background-color: #000000;
+    color: #D4AF37;
+}
+
+      
+      @media (max-width: 1250px) {
+        .pricing-container{
+          flex-direction: column;
+        height: 100%;
+        }
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="pricing-plan basic-plan">
+        <div class="plan-title">Basic</div>
+        <div class="plan-price">$9.99/month</div>
+        <ul class="plan-features">
+          <li> 10GB Storage</li>
+          <li> 1 User</li>
+       <li class="disabled">Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan standard-plan">
+        <div class="plan-title">Standard</div>
+        <div class="plan-price">$19.99/month</div>
+        <ul class="plan-features">
+          <li> 50GB Storage</li>
+          <li> 5 Users</li>
+          <li> Phone &amp; Email Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan premium-plan">
+        <div class="plan-title">Premium</div>
+        <div class="plan-price">$49.99/month</div>
+        <ul class="plan-features">
+          <li> 100GB Storage</li>
+          <li> 10 Users</li>
+          <li> 24/7 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+    </div>
+  </body>
+</html>
